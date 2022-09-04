@@ -1,0 +1,9 @@
+{
+  "name": "cpp-starter",
+  "version-string": "0.1.0-dev0",
+  "dependencies": [
+    "fmt",
+    "scnlib",
+    "cli11"
+  ]
+}
