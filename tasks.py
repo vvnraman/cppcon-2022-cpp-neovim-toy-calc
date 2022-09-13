@@ -3,11 +3,11 @@ This requires invoke to be installed on the machine (not venv), which can be
 done via:
     pipx install invoke
 """
+from datetime import datetime
 from hashlib import md5
 from pathlib import Path
 from shutil import rmtree as shutil_rmtree
 from typing import Optional
-from datetime import datetime
 
 from invoke import task
 
@@ -148,3 +148,15 @@ def clean_all(c):
         print(f"Cleaned {install_path}")
     else:
         print("Install path absent. Nothing to do.")
+
+
+@task
+def ls(c):
+    """List files using lsd and skip vcpkg and .cache folder"""
+    cmd = [
+        "lsd",
+        "--tree",
+        "--ignore-glob vcpkg",
+        "--ignore-glob .cache",
+    ]
+    c.run(" ".join(cmd), pty=True)

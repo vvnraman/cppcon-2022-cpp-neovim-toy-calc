@@ -2,7 +2,7 @@
 Toy Calculator
 ##############
 
-Toy calculator in C++ to demonstrate Neovim features for my talk.
+Toy calculator in C++ to demonstrate Neovim features for my `talk at CppCon 2022 <https://vvnraman.github.io/cppcon-2022-cpp-neovim/>`_.
 
 
 Build steps
